@@ -1,5 +1,9 @@
+import { SearchBar } from "./SearchBar "
+
 export const FilterableProductTable = () => {
   return (
-    <div>FilterableProductTable</div>
+    <div>
+        <SearchBar />
+    </div>
   )
 }
