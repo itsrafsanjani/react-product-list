@@ -6,8 +6,10 @@ export const SearchBar = () => {
       </div>
 
       <div>
-        <label htmlFor="stock">Only show products in stock</label>
-        <input type="checkbox" name="stock" id="stock" />
+        <label htmlFor="stock">
+          <input type="checkbox" name="stock" id="stock" />
+          Only show products in stock
+        </label>
       </div>
     </form>
   )

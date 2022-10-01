@@ -1,9 +1,11 @@
+import { ProductTable } from "./ProductTable"
 import { SearchBar } from "./SearchBar "
 
-export const FilterableProductTable = () => {
+export const FilterableProductTable = ({products}) => {
   return (
     <div>
-        <SearchBar />
+      <SearchBar />
+      <ProductTable products={products} />
     </div>
   )
 }
