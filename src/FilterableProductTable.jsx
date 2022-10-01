@@ -1,11 +1,23 @@
-import { ProductTable } from "./ProductTable"
-import { SearchBar } from "./SearchBar "
+import { useState } from 'react'
+import { ProductTable } from './ProductTable'
+import { SearchBar } from './SearchBar '
 
-export const FilterableProductTable = ({products}) => {
+export const FilterableProductTable = ({ products }) => {
+  const [filterText, setFilterText] = useState('')
+  const [inStockOnly, setInStockOnly] = useState(false)
   return (
     <div>
-      <SearchBar />
-      <ProductTable products={products} />
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={setFilterText}
+        onInStockOnlyChange={setInStockOnly}
+      />
+      <ProductTable
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+      />
     </div>
   )
 }
