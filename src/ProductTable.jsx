@@ -1,5 +1,14 @@
 import { ProductCategoryRow } from './ProductCategoryRow'
 import { ProductRow } from './ProductRow'
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from '@mui/material'
 
 export const ProductTable = ({ products, filterText, inStockOnly }) => {
   const rows = []
@@ -26,14 +35,16 @@ export const ProductTable = ({ products, filterText, inStockOnly }) => {
   })
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Price</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>{rows}</TableBody>
+      </Table>
+    </TableContainer>
   )
 }
