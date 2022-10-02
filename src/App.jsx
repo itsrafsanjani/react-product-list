@@ -1,3 +1,4 @@
+import { Container, Grid } from '@mui/material'
 import './App.css'
 import { FilterableProductTable } from './FilterableProductTable'
 
@@ -12,9 +13,17 @@ const PRODUCTS = [
 
 function App() {
   return (
-    <div className="App">
-      <FilterableProductTable products={PRODUCTS} />
-    </div>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      minHeight="100vh"
+    >
+      <Grid item xs={12} sm={8} md={4} lg={3}>
+        <FilterableProductTable products={PRODUCTS} />
+      </Grid>
+    </Grid>
   )
 }
 
